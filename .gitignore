@@ -1,0 +1,27 @@
+# ---------- 原始资料 / 隐私：不上线 ----------
+# 人员照片原图（用 tools/build-people-images.py 生成网页版）
+assets/image/
+# 含学生邮箱的个人信息收集表
+*人员收集*.xlsx
+*人员收集*.xls
+*人员收集*.csv
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# ---------- Node / 编辑器 ----------
+node_modules/
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*~
+
+# ---------- 构建/缓存 ----------
+.cache/
+*.log
