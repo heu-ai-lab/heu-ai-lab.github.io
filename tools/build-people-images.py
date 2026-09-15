@@ -37,6 +37,7 @@ NAME_MAP = {
     "张旭": "zhangxu",
     "白卓娜": "baizhuona",
     "王乐威": "wanglewei",
+    "李鹏举": "lipengju",
     "唐博文": "tangbowen",
 }
 
