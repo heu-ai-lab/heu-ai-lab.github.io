@@ -61,11 +61,7 @@
   }
   renderNews();
 
-  /* 4. 页脚年份 */
-  var y = document.getElementById("year");
-  if (y) y.textContent = new Date().getFullYear();
-
-  /* 5. 滚动入场动画 */
+  /* 4. 滚动入场动画 */
   var targets = document.querySelectorAll(".reveal");
   if (!targets.length || !("IntersectionObserver" in window)) {
     targets.forEach(function (t) { t.classList.add("in"); });
