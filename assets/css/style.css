@@ -459,6 +459,49 @@ img { max-width: 100%; display: block; }
 .section-head .join-contact { margin-top: 10px; color: var(--ink-2); }
 .join-contact a { color: var(--accent); font-weight: 650; }
 
+/* ---------- 课题组相册 ---------- */
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+.album-card {
+  margin: 0;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.album-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+  border-color: #d6dde9;
+}
+.album-photo {
+  display: block;
+  aspect-ratio: 16 / 10;
+  background: var(--bg-soft);
+}
+.album-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.album-caption { padding: 16px 17px 18px; }
+.album-caption h3 {
+  margin: 0 0 7px;
+  color: var(--ink);
+  font-size: 16px;
+  font-weight: 650;
+  line-height: 1.45;
+}
+.album-caption p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13.5px;
+}
+
 /* ---------- 滚动出现动画 ---------- */
 .reveal { opacity: 0; transform: translateY(14px); transition: opacity .55s ease, transform .55s ease; }
 .reveal.in { opacity: 1; transform: none; }
@@ -471,6 +514,7 @@ img { max-width: 100%; display: block; }
 @media (max-width: 900px) {
   .stats { grid-template-columns: repeat(2, 1fr); }
   .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .album-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 720px) {
@@ -491,7 +535,7 @@ img { max-width: 100%; display: block; }
   .nav-links a { padding: 11px 12px; font-size: 15.5px; }
   .hero { padding: 60px 0 52px; }
   .section { padding: 56px 0; }
-  .grid-3, .grid-2, .join-grid { grid-template-columns: 1fr; }
+  .grid-3, .grid-2, .join-grid, .album-grid { grid-template-columns: 1fr; }
   .person { grid-template-columns: 1fr; text-align: left; }
   .person dl { grid-template-columns: 84px 1fr; }
   .news-item { grid-template-columns: 1fr; gap: 6px; }
