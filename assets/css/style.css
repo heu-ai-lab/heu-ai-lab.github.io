@@ -410,24 +410,40 @@ img { max-width: 100%; display: block; }
 }
 
 .member h4 { margin: 0 0 3px; font-size: 16px; font-weight: 650; letter-spacing: .2px; }
-.member .m-role { font-size: 12.5px; font-weight: 600; color: var(--accent); margin-bottom: 8px; }
-.member .m-mail {
-  display: block;
-  font-size: 12.5px;
-  color: var(--muted);
-  word-break: break-all;
-  line-height: 1.5;
-}
-.member .m-mail:hover { color: var(--accent); }
-.member .m-gh {
+.member .m-mail,
+.member .m-gh,
+.member .m-site,
+.profile-icon-link {
   display: inline-block;
-  margin-top: 8px;
-  font-size: 12.5px;
-  color: var(--accent);
-  background: var(--accent-soft);
-  border-radius: 6px;
-  padding: 2px 9px;
+  width: 34px;
+  height: 34px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background-color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 21px 21px;
+  text-indent: -9999px;
+  white-space: nowrap;
+  transition: transform .18s ease, background-color .18s ease, border-color .18s ease;
 }
+.member .m-mail,
+.member .m-gh,
+.member .m-site { margin: 8px 3px 0; }
+.member .m-mail { background-image: url("../img/icons/mail.svg"); }
+.member .m-gh { background-image: url("../img/icons/github.svg"); }
+.member .m-site,
+.profile-icon-link { background-image: url("../img/icons/website.svg"); }
+.member .m-mail:hover,
+.member .m-gh:hover,
+.member .m-site:hover,
+.profile-icon-link:hover {
+  transform: translateY(-2px);
+  background-color: var(--accent-soft);
+  border-color: #c5d4ec;
+}
+.profile-icon-link img { display: none; }
 
 .group-title {
   font-size: 15px;
