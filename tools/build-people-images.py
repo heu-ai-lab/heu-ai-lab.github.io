@@ -38,6 +38,8 @@ NAME_MAP = {
     "白卓娜": "baizhuona",
     "王乐威": "wanglewei",
     "李鹏举": "lipengju",
+    "王星博": "wangxingbo",
+    "尹成伟": "yinchengwei",
     "唐博文": "tangbowen",
 }
 
