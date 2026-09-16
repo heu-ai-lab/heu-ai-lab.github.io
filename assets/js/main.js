@@ -20,12 +20,33 @@
     });
   }
 
-  /* 2. 当前页面导航高亮（按文件名匹配） */
+  /* 2. 当前页面导航高亮（区分首页与页内锚点） */
   var here = location.pathname.split("/").pop() || "index.html";
-  document.querySelectorAll(".nav-links a[href]").forEach(function (a) {
-    var href = a.getAttribute("href").split("#")[0];
-    if (href && href === here) a.classList.add("active");
-  });
+  var navItems = document.querySelectorAll(".nav-links a[href]");
+
+  function updateActiveNav() {
+    var matchedHash = "";
+
+    navItems.forEach(function (a) {
+      var href = a.getAttribute("href");
+      var hashAt = href.indexOf("#");
+      var page = hashAt >= 0 ? href.slice(0, hashAt) : href;
+      var hash = hashAt >= 0 ? href.slice(hashAt) : "";
+      if (page === here && hash && hash === location.hash) matchedHash = hash;
+    });
+
+    navItems.forEach(function (a) {
+      var href = a.getAttribute("href");
+      var hashAt = href.indexOf("#");
+      var page = hashAt >= 0 ? href.slice(0, hashAt) : href;
+      var hash = hashAt >= 0 ? href.slice(hashAt) : "";
+      var active = page === here && (matchedHash ? hash === matchedHash : !hash);
+      a.classList.toggle("active", active);
+    });
+  }
+
+  updateActiveNav();
+  window.addEventListener("hashchange", updateActiveNav);
 
   /* 3. 新闻动态渲染
         在页面中放 <div class="news-list" data-limit="5"></div> 即可 */

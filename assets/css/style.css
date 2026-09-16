@@ -456,6 +456,8 @@ img { max-width: 100%; display: block; }
   padding: 26px;
 }
 .join-card h3 { margin: 0 0 12px; font-size: 18px; font-weight: 680; }
+.section-head .join-contact { margin-top: 10px; color: var(--ink-2); }
+.join-contact a { color: var(--accent); font-weight: 650; }
 
 /* ---------- 滚动出现动画 ---------- */
 .reveal { opacity: 0; transform: translateY(14px); transition: opacity .55s ease, transform .55s ease; }
