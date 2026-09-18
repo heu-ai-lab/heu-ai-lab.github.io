@@ -9,14 +9,8 @@ window.LAB_NEWS = [
   {
     date: "2026-09-15",
     tag: "学生",
-    title: "欢迎 15 名新同学加入人工智能与媒体计算团队（博士 1 名、硕士 13 名、本科 1 名）",
+    title: "欢迎10名新同学加入本团队，祝大家学习顺利！",
     url: "people.html"
-  },
-  {
-    date: "2026-09-15",
-    tag: "网站",
-    title: "团队主页正式上线，可通过 heu-ai-lab.github.io 访问",
-    url: ""
   }
 ];
 
