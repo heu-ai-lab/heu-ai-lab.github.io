@@ -24,6 +24,9 @@ QUALITY = 82
 NAME_MAP = {
     "王勇": "wangyong",
     "张品蕊": "zhangpinrui",
+    "何帆": "hefan",
+    "尚凡淑": "shangfanshu",
+    "刘聪": "liucong",
     "陆进": "lujin",
     "林远硕": "linyuanshuo",
     "薛宇阳": "xueyuyang",
