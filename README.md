@@ -10,6 +10,7 @@ lab-site/
 ├── research.html         # 研究方向 / 科研项目 / 研究成果
 ├── people.html           # 团队成员（教师、在读学生招募说明）
 ├── news.html             # 新闻动态（全部）
+├── join.html             # 加入我们（硕博研究生、本科生科研与竞赛）
 ├── assets/
 │   ├── css/style.css     # 全站样式
 │   ├── js/main.js        # 移动端导航、导航高亮、新闻渲染、入场动画
